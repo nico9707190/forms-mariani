@@ -13,25 +13,54 @@
     <br>
     Hai ancora 5 tentativi
     <form action="" method="get">
-        <input id="prova" type="number" name="user_guess" value="200">
+        <input id="prova" type="number" name="user_guess" value="100">
         <input id="button" type="button" name="guess" value="indovina">
     </form>
 
     
     <script>
-        // 1. dichiaro una variabile e con querySelector memorizzo il button
-        // 2. dichiaro un EVENT LISTENER sul button
-
+        let n;
+        let i;
+        i = 0;
+        let imax;
+        imax = 5;
+        let indovinato
+        indovinato = false;
+        let min;
+        min = 1;
+        let max; 
+        max = 100;
+        let r 
+        r = generaNumeroIntero(min,max);
+        
         let button = document.querySelector("#button")     // queryselecton ci permette di prendere in input un elemento html e, tramite 
 
-        button.addEventListener("click" , function(event){        // aggiungo un event listener alla variabile button
-            console.log(event)
-            //questa funzione viene eseguita solo dopo che l'utente clicca sul button
-            // 1. prendo l'elemento html in cui l'utente ha scritto il numero
-            // 2. trasformo in intero il numero
-            // 3. controllo i valori
-            // 4. in console scrivo i risultati --> per il momento
-        })      
+        button.addEventListener("click" , function(event));{
+
+            if (i > imax){
+                console.log("Tentativi esauriti, il numero era " + r)
+            }
+            
+            n = document.querySelector("#prova").value
+            n = parseInt(n)
+            i = i + 1
+            
+            if (n < min || n > max || isNaN(n)){
+                console.log("errore inserimento")
+            }
+
+            if (n === r){
+                console.log("indovinato! ")
+            }
+
+            if (n < r){
+                console.log("numero troppo piccolo! ")
+            }
+
+            if (n > r){
+                console.log("numero troppo grande!")
+            }
+        }      
 
 
     </script>
@@ -41,15 +70,15 @@
     
     <script type="text/javascript">
         function generaNumeroIntero(min,max){
-            let numeroCasuale = Math.random()
-            numeroCasuale = numeroCasuale * max
-            numeroCasuale = parseInt(numeroCasuale)
-            return numeroCasuale
+            let numeroCasuale = Math.random(min,max)
+            numeroCasuale = numeroCasuale * (max-min)
+            numeroCasuale = parseInt(numeroCasuale) + min
+            return numeroCasuale;
         }
 
-        function sanitize(risposta){
-            risposta = risposta.trim()
-            return risposta
+        function sanitize(n){
+            n = n.trim()
+            return n;
         }
 
 
@@ -68,8 +97,9 @@
         let r
         r = generaNumeroIntero(min,max)
         let risposta
-        while (conta<5 && lesgoski === 0){
-            risposta = prompt("Inserisci un numero tra 1 e 100 ");
+        //swhile (conta<5 && lesgoski === 0){
+        
+            /*    risposta = prompt("Inserisci un numero tra 1 e 100 ");
             while(risposta === null){
                 risposta = prompt("Inserisci un numero tra 1 e 100");
             }
