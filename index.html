@@ -35,9 +35,9 @@
         
         let button = document.querySelector("#button")     // queryselecton ci permette di prendere in input un elemento html e, tramite 
 
-        button.addEventListener("click" , function(event));{
+        button.addEventListener("click" , function(event){
 
-            if (i > imax){
+            if (i >= imax){
                 console.log("Tentativi esauriti, il numero era " + r)
             }
             
@@ -60,15 +60,8 @@
             if (n > r){
                 console.log("numero troppo grande!")
             }
-        }      
+        })      
 
-
-    </script>
-    
-    
-    
-    
-    <script type="text/javascript">
         function generaNumeroIntero(min,max){
             let numeroCasuale = Math.random(min,max)
             numeroCasuale = numeroCasuale * (max-min)
@@ -80,6 +73,14 @@
             n = n.trim()
             return n;
         }
+
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript">
+        
 
 
 
