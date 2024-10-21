@@ -1,0 +1,95 @@
+body{
+    background-color: #CCFFC5;
+}
+.titolo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 462px;
+    margin-top: 144px;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Inter;
+}
+
+.testo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    margin-left: 439px;
+    margin-right: 296px;
+    font-family: Inter;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.testo1{
+    margin-left: 537px;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: normal;
+    padding-top: 147px;
+}
+
+#prova{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    height: 60px;
+    margin-left: 538px;
+    border-color: white;
+    padding-top: 3px;
+}
+
+#button{
+    color: black;
+    background-color: #3AE3A8;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: Inter;
+    width: 350px;
+    height: 60px;
+    border-color: #3AE3A8;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: 538px;
+    padding-top: 18px;
+}
+
+.sottot{
+    text-align: center;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: normal;
+    padding-top: 18px;
+}
+
+.megadiv{
+    background-color: blue;
+    transition: all 1s;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container{
+    width: 50vw;
+    height: 50vh;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.red{
+    background-color: red;
+}
